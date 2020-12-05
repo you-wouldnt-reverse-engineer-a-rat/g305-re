@@ -46,5 +46,6 @@ Reverse engineering of the [G305](https://www.logitechg.com/en-us/products/gamin
 | PR675 | 1.85 | 1.4 | 550 - 600 | 770 - 840 | 77 - 84 |
 | Super Capacitor 70F | | 2.7 | - | - | 5.83 |
 | Super Capacitor 30F | | 2.7 | - | - | 2.5 |
-(source)[https://en.wikipedia.org/wiki/AAA_battery], (source)[https://en.wikipedia.org/wiki/AA_battery]
+
+[source](https://en.wikipedia.org/wiki/AAA_battery), [source](https://en.wikipedia.org/wiki/AA_battery)
 
