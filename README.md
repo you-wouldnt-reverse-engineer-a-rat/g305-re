@@ -24,14 +24,13 @@ Reverse engineering of the [G305](https://www.logitechg.com/en-us/products/gamin
 | Idle Power * | 4 | mW |
 | Deep Sleep Power ** | 200 | uW |
 | Turn On Voltage *** | 1.35 | V |
-| Max Voltage **** | 4.8 | V |
+| Max Voltage **** | 2.0 | V |
 
 ```
      * No movement
     ** After approximately 90 seconds idle 
    *** Below this voltage the device is consistently unable to start
-  **** The device can tolerate more (tested up to 5.5V), but above 4.8V it seems to
-            consume unusually high power during Deep Sleep
+  **** The device can tolerate more (tested up to 5.5V), but above 4.8V it seems to consume unusually high power during Deep Sleep, and above 2.0V the sensor voltage bus follows the input voltage meaning it goes over the rated opperating conditions (assumed 2.1V due to similar device ratings).
 ```
 `These are rough conservative approximations (though measured with fairly good equipment). Measurements on a single personal device.`
 
