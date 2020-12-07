@@ -43,8 +43,8 @@ Reverse engineering of the [G305](https://www.logitechg.com/en-us/products/gamin
 | Lithium 14500 (AA) | | 3.6 | 600 - 840 (1600 @ 1.5V) | 2160 - 3024 (2400 @ 1.5V) | 216 - 302 |
 | Lithium 10440 (AAA) | | 3.6 | 350 | 1260 | 126 |
 | PR675 | 1.85 | 1.4 | 550 - 600 | 770 - 840 | 77 - 84 |
-| Super Capacitor 70F | | 2.7 | - | - | 5.83 |
-| Super Capacitor 30F | | 2.7 | - | - | 2.5 |
+| Super Capacitor 70F | 18 | 2.7 | - | - | 5.83 |
+| Super Capacitor 30F | 6.9 - 9.7 | 2.7 | - | - | 2.5 |
 
 [source](https://en.wikipedia.org/wiki/AAA_battery), [source](https://en.wikipedia.org/wiki/AA_battery)
 
