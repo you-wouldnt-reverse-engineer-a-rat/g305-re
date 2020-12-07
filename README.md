@@ -48,3 +48,50 @@ Reverse engineering of the [G305](https://www.logitechg.com/en-us/products/gamin
 
 [source](https://en.wikipedia.org/wiki/AAA_battery), [source](https://en.wikipedia.org/wiki/AA_battery)
 
+### hardware
+
+The main board consists of:
+
+ - The HERO3 sensor
+ - A NRF52810 MCU in QFN-48
+ -
+ -
+
+#### testpoints
+
+The PCB contains the following testpoints:
+
+testpoint | Funcion
+:---: | :---:
+TP1 | VIN +
+TP2 | VIN -
+TP3 | 
+TP4 | 
+TP5 | 
+TP6 | 
+TP7 | 
+TP8 | 
+TP9 | 
+TP10 | 
+TP11 | 
+TP12 | 
+TP13 | 
+TP14 | 
+TP15 | 
+TP16 | 
+
+#### MCU connections
+
+Pin number | Pin name | Function
+:---: | :---: | :---:
+0 | - | TBD
+
+### firmware
+
+
+### Sensor
+
+The G305 comes with a HERO3 sensor, made by (I believe) [Pixart](https://www.pixart.com/index/).
+
+A reverse engineering effort towards this sensor wwill be made in a separate repo [hero3-re](https://github.com/perigoso/hero3-re).
+
