@@ -1,6 +1,6 @@
 # g305-re
 
-![g305](https://resource.logitechg.com/e_trim/w_652,ar_4:3,c_limit,q_auto:best,f_auto/w_692,h_519,c_lpad,b_rgb:2f3132,dpr_auto/content/dam/gaming/en/products/g305/g305-gallery-1.png?v=1)
+![g305](assets/g305.png)
 
 Reverse engineering of the [G305](https://www.logitechg.com/en-us/products/gaming-mice/g305-lightspeed-wireless-gaming-mouse.910-005280.html) mouse by [Logitech](https://www.logitech.com/en-us)
 
@@ -52,6 +52,15 @@ the rated opperating conditions (assumed 2.1V due to similar sensor ratings).
 [source](https://en.wikipedia.org/wiki/AAA_battery), [source](https://en.wikipedia.org/wiki/AA_battery)
 
 ### hardware
+
+#### Mechanical
+
+CAD drawings of the G305 available in [cad](cad/)
+
+![g305_pcb](assets/g305_pcb_cad.png)
+credit to [inornate](https://www.thingiverse.com/inornate) on thingiverse.
+
+#### Components
 
 The main board consists of:
 
