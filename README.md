@@ -112,68 +112,32 @@ TP23 | P0.28 | Unused Pin Breakout
 
 #### MCU connections
 
-`I'm tired, didn't feel like filling this, the info is on the trace file`
+Pin name | Function
+:---: | :---:
+P0.11 | CS
+P0.12 | MOSI
+P0.13 | MISO
+P0.14 | SCLK
+~ | ~
+P0.15 | LMB
+P0.16 | RMB
+P0.17 | MMB
+P0.18 | side button
+P0.19 | side button
+P0.20 | dpi button
+~ | ~
+P0.23 | encoder pull up resistors (power saving)
+P0.00 | wheel encoder
+P0.01 | wheel encoder
+~ | ~
+P0.02 | used as analog input to 2V??
+P0.03 | used as analog input to 3.7V section??
+~ | ~
+P0.05 | rgb
+P0.06 | rgb
+P0.07 | rgb
 
-Pin number | Pin name | Function
-:---: | :---: | :---:
-1 | DEC1 | Core Decoupling
-2 | P0.00 | TBD
-3 | P0.01 | TBD
-4 | P0.02 | TBD
-5 | - | TBD
-6 | - | TBD
-7 | - | TBD
-8 | - | TBD
-9 | - | TBD
-10 | - | TBD
-11 | - | TBD
-12 | - | TBD
-13 | - | TBD
-14 | - | TBD
-15 | - | TBD
-16 | - | TBD
-17 | - | TBD
-17 | - | TBD
-18 | - | TBD
-19 | - | TBD
-21 | - | TBD
-12 | - | TBD
-13 | - | TBD
-14 | - | TBD
-15 | - | TBD
-16 | - | TBD
-17 | - | TBD
-18 | - | TBD
-19 | - | TBD
-20 | - | TBD
-21 | - | TBD
-22 | - | TBD
-23 | - | TBD
-24 | - | TBD
-25 | - | TBD
-26 | - | TBD
-27 | - | TBD
-28 | - | TBD
-29 | - | TBD
-30 | - | TBD
-31 | - | TBD
-32 | - | TBD
-33 | - | TBD
-34 | - | TBD
-35 | - | TBD
-36 | - | TBD
-37 | - | TBD
-38 | - | TBD
-39 | - | TBD
-40 | - | TBD
-41 | - | TBD
-42 | - | TBD
-43 | - | TBD
-44 | - | TBD
-45 | - | TBD
-46 | - | TBD
-47 | - | TBD
-48 | - | TBD
+`guess on P0.02/P0.03: one or both of them is used to monitor battery voltage`
 
 ### firmware
 
