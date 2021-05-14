@@ -32,8 +32,8 @@ Reverse engineering of the [G305](https://www.logitechg.com/en-us/products/gamin
    *** Below this voltage the device is consistently unable to start
   **** The device can tolerate more (tested up to 5.5V), 
 but above 4.8V it seems to consume unusually high power during Deep Sleep, 
-and above 2.0V the sensor voltage bus follows the input voltage meaning it goes over 
-the rated opperating conditions (assumed 2.1V due to similar sensor ratings).
+and above 2.0V the sensor voltage bus follows the input voltage (the same appens with the main 3.3V bus) meaning it goes over 
+the rated opperating conditions (assumed 2.1V given ratings of similar sensor).
 ```
 `These are rough conservative approximations (though measured with fairly good equipment). Measurements on a single personal device.`
 
@@ -52,6 +52,10 @@ the rated opperating conditions (assumed 2.1V due to similar sensor ratings).
 [source](https://en.wikipedia.org/wiki/AAA_battery), [source](https://en.wikipedia.org/wiki/AA_battery)
 
 ### hardware
+The hardware was trace in gimp, and can be analyzed in there too (everything is layered), file is [here](trace/g305.xcf).
+![g305-re-bot](assets/g305-re-bot.png)
+![g305-re-top](assets/g305-re-top.png)
+![g305-re-overlay](assets/g305-re-overlay.png)
 
 #### Mechanical
 
@@ -64,46 +68,117 @@ credit to [inornate](https://www.thingiverse.com/inornate) on thingiverse.
 
 The main board consists of:
 
- - The HERO3 sensor
+ - The HERO sensor
  - A NRF52810 MCU in QFN-48
- -
- -
+ - unidentified boost converter 1
+ - unidentified boost converter 2
+ - 3x unidentified mosfet
+ - unidentified common anode RGB LED
+ - chip antenna
+ - 16MHz crystal?
 
 #### testpoints
 
 The PCB contains the following testpoints:
 
-testpoint | Funcion
-:---: | :---:
-TP1 | VIN +
-TP2 | VIN -
-TP3 | 
-TP4 | 
-TP5 | 
-TP6 | 
-TP7 | 
-TP8 | 
-TP9 | 
-TP10 | 
-TP11 | 
-TP12 | 
-TP13 | 
-TP14 | 
-TP15 | 
-TP16 | 
+testpoint | Funcion | Additional Info
+:---: | :---: | :---:
+TP1 | VIN + | Direct from battery 1.5V
+TP2 | VIN - | Direct from battery 
+TP3 |  | Does not Exist? 
+TP4 |  | Does not Exist?
+TP5 |  | Does not Exist?
+TP6 | P0.04 | Unused Pin Breakout
+TP7 |  | Does not Exist?
+TP8 |  | Does not Exist?
+TP9 |  | Does not Exist?
+TP10 | GND | 
+TP11 | VDD | 
+TP12 | SWDIO | 
+TP13 | SWCLK | 
+TP14 | RESET | 
+TP15 | P0.22 | SWO?
+TP16 | P0.08 | Unused Pin Breakout
+TP17 | P0.09 | Unused Pin Breakout
+TP18 | P0.10 | Unused Pin Breakout
+TP19 | P0.29 | Unused Pin Breakout
+TP20 | P0.30 | Unused Pin Breakout
+TP21 | P0.31 | Unused Pin Breakout
+TP22 | P0.27 | Unused Pin Breakout
+TP23 | P0.28 | Unused Pin Breakout
 
 #### MCU connections
 
+`I'm tired, didn't feel like filling this, the info is on the trace file`
+
 Pin number | Pin name | Function
 :---: | :---: | :---:
-0 | - | TBD
+1 | DEC1 | Core Decoupling
+2 | P0.00 | TBD
+3 | P0.01 | TBD
+4 | P0.02 | TBD
+5 | - | TBD
+6 | - | TBD
+7 | - | TBD
+8 | - | TBD
+9 | - | TBD
+10 | - | TBD
+11 | - | TBD
+12 | - | TBD
+13 | - | TBD
+14 | - | TBD
+15 | - | TBD
+16 | - | TBD
+17 | - | TBD
+17 | - | TBD
+18 | - | TBD
+19 | - | TBD
+21 | - | TBD
+12 | - | TBD
+13 | - | TBD
+14 | - | TBD
+15 | - | TBD
+16 | - | TBD
+17 | - | TBD
+18 | - | TBD
+19 | - | TBD
+20 | - | TBD
+21 | - | TBD
+22 | - | TBD
+23 | - | TBD
+24 | - | TBD
+25 | - | TBD
+26 | - | TBD
+27 | - | TBD
+28 | - | TBD
+29 | - | TBD
+30 | - | TBD
+31 | - | TBD
+32 | - | TBD
+33 | - | TBD
+34 | - | TBD
+35 | - | TBD
+36 | - | TBD
+37 | - | TBD
+38 | - | TBD
+39 | - | TBD
+40 | - | TBD
+41 | - | TBD
+42 | - | TBD
+43 | - | TBD
+44 | - | TBD
+45 | - | TBD
+46 | - | TBD
+47 | - | TBD
+48 | - | TBD
 
 ### firmware
 
+[to be dumped](https://limitedresults.com/2020/06/nrf52-debug-resurrection-approtect-bypass/)
 
 ### Sensor
 
-The G305 comes with a HERO3 sensor, made by (I believe) [Pixart](https://www.pixart.com/index/).
+The G305 comes with a HERO sensor, made by (I believe) [Pixart](https://www.pixart.com/index/).
 
-A reverse engineering effort towards this sensor wwill be made in a separate repo [hero3-re](https://github.com/perigoso/hero3-re).
+A reverse engineering effort towards this sensor wwill be made in a separate repo [hero-re](https://github.com/perigoso/hero-re).
 
