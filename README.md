@@ -65,9 +65,13 @@ PCB as populated a Ceramic chip Antenna capable of 2.4 to 2.4835GHz.
 ![g305-receiver](assets/g305-receiver.png)
 
 [FCC Documents](https://fccid.io/JNZCU0008A)
+
 Frequencies: 2.402 to 2.481GHz
+
 Modulations technology: GFSK
+
 Antenna Type: Printed
+
 MCU: TI CC2544
 
 `Reverse engineering of the receiver is not planned`
@@ -134,6 +138,7 @@ TP23 | P0.28 | Unused Pin Breakout
 ### MCU
 
 The MCU is a nRF52810 from nordicsemi, ARM Cortex M4
+Package: QFN-48
 Endianness of the MCU: Little Endian
 
 Pin name | Function
