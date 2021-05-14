@@ -52,7 +52,10 @@ the rated opperating conditions (assumed 2.1V given ratings of similar sensor).
 [source](https://en.wikipedia.org/wiki/AAA_battery), [source](https://en.wikipedia.org/wiki/AA_battery)
 
 ### hardware
-The hardware was trace in gimp, and can be analyzed in there too (everything is layered), file is [here](trace/g305.xcf).
+
+The hardware was traced in gimp, and can be analyzed in there too (everything is layered), file is [here](trace/g305.xcf).
+`Whatch out, the top is mirrored!`
+
 ![g305-re-bot](assets/g305-re-bot.png)
 ![g305-re-top](assets/g305-re-top.png)
 ![g305-re-overlay](assets/g305-re-overlay.png)
