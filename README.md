@@ -4,7 +4,7 @@
 
 Reverse engineering of the [G305](https://www.logitechg.com/en-us/products/gaming-mice/g305-lightspeed-wireless-gaming-mouse.910-005280.html) mouse by [Logitech](https://www.logitech.com/en-us)
 
-### Specs
+## Specs
 
 | Spec | Range | Unit |
 |:--|--:|:-:|
@@ -15,8 +15,7 @@ Reverse engineering of the [G305](https://www.logitechg.com/en-us/products/gamin
 | Processor Core | 32-bit ARM | - |
 | Claimed Battery Life | 250 | hours |
 
-#### Eletrical Characteristics
-
+### Eletrical Characteristics
 
 | Characteristic | Range | Unit |
 |:--|--:|:-:|
@@ -28,16 +27,26 @@ Reverse engineering of the [G305](https://www.logitechg.com/en-us/products/gamin
 
 ```
      * No movement
-    ** After approximately 90 seconds idle 
+    ** After approximately 90 seconds idle
    *** Below this voltage the device is consistently unable to start
-  **** The device can tolerate more (tested up to 5.5V), 
-but above 4.8V it seems to consume unusually high power during Deep Sleep, 
-and above 2.0V the sensor voltage bus follows the input voltage (the same appens with the main 3.3V bus) meaning it goes over 
+  **** The device can tolerate more (tested up to 5.5V),
+but above 4.8V it seems to consume unusually high power during Deep Sleep,
+and above 2.0V the sensor voltage bus follows the input voltage (the same appens with the main 3.3V bus) meaning it goes over
 the rated opperating conditions (assumed 2.1V given ratings of similar sensor).
 ```
 `These are rough conservative approximations (though measured with fairly good equipment). Measurements on a single personal device.`
 
-#### Expected Battery Life
+### Radio
+
+Frequency range: 2.402-2.481 GHz
+Modulation Technology: GFSK
+
+PCB as populated a Ceramic chip Antenna capable of 2.4 to 2.4835GHz.
+
+[FCC Documents](https://fccid.io/JNZMR0071) for the mouse.
+
+
+### Expected Battery Life
 
 | Battery | Weight [g] | Nominal Voltage [V] | Capacity [mAh] | Capacity [mWh] | Active Battery Life [h] |
 |:--|--:|--:|--:|--:|--:|
@@ -49,9 +58,21 @@ the rated opperating conditions (assumed 2.1V given ratings of similar sensor).
 | Super Capacitor 70F | 18 | 2.7 | - | - | 5.83 |
 | Super Capacitor 30F | 6.9 - 9.7 | 2.7 | - | - | 2.5 |
 
-[source](https://en.wikipedia.org/wiki/AAA_battery), [source](https://en.wikipedia.org/wiki/AA_battery)
+[source: AAA Battery](https://en.wikipedia.org/wiki/AAA_battery), [source: AA Battery](https://en.wikipedia.org/wiki/AA_battery)
 
-### hardware
+## Receiver
+
+![g305-receiver](assets/g305-receiver.png)
+
+[FCC Documents](https://fccid.io/JNZCU0008A)
+Frequencies: 2.402 to 2.481GHz
+Modulations technology: GFSK
+Antenna Type: Printed
+MCU: TI CC2544
+
+`Reverse engineering of the receiver is not planned`
+
+## hardware
 
 The hardware was traced in gimp, and can be analyzed in there too (everything is layered), file is [here](trace/g305.xcf).
 `Whatch out, the top is mirrored!`
@@ -60,14 +81,14 @@ The hardware was traced in gimp, and can be analyzed in there too (everything is
 ![g305-re-top](assets/g305-re-top.png)
 ![g305-re-overlay](assets/g305-re-overlay.png)
 
-#### Mechanical
+### Mechanical
 
 CAD drawings of the G305 available in [cad](cad/)
 
 ![g305_pcb](assets/g305_pcb_cad.png)
 credit to [inornate](https://www.thingiverse.com/inornate) on thingiverse.
 
-#### Components
+### Components
 
 The main board consists of:
 
@@ -80,26 +101,26 @@ The main board consists of:
  - chip antenna
  - 16MHz crystal?
 
-#### testpoints
+### testpoints
 
 The PCB contains the following testpoints:
 
 testpoint | Funcion | Additional Info
 :---: | :---: | :---:
 TP1 | VIN + | Direct from battery 1.5V
-TP2 | VIN - | Direct from battery 
-TP3 |  | Does not Exist? 
+TP2 | VIN - | Direct from battery
+TP3 |  | Does not Exist?
 TP4 |  | Does not Exist?
 TP5 |  | Does not Exist?
 TP6 | P0.04 | Unused Pin Breakout
 TP7 |  | Does not Exist?
 TP8 |  | Does not Exist?
 TP9 |  | Does not Exist?
-TP10 | GND | 
-TP11 | VDD | 
-TP12 | SWDIO | 
-TP13 | SWCLK | 
-TP14 | RESET | 
+TP10 | GND |
+TP11 | VDD |
+TP12 | SWDIO |
+TP13 | SWCLK |
+TP14 | RESET |
 TP15 | P0.22 | SWO?
 TP16 | P0.08 | Unused Pin Breakout
 TP17 | P0.09 | Unused Pin Breakout
@@ -110,7 +131,10 @@ TP21 | P0.31 | Unused Pin Breakout
 TP22 | P0.27 | Unused Pin Breakout
 TP23 | P0.28 | Unused Pin Breakout
 
-#### MCU connections
+### MCU
+
+The MCU is a nRF52810 from nordicsemi, ARM Cortex M4
+Endianness of the MCU: Little Endian
 
 Pin name | Function
 :---: | :---:
@@ -139,11 +163,11 @@ P0.07 | rgb
 
 `guess on P0.02/P0.03: one or both of them is used to monitor battery voltage`
 
-### firmware
+## firmware
 
 [to be dumped](https://limitedresults.com/2020/06/nrf52-debug-resurrection-approtect-bypass/)
 
-### Sensor
+## Sensor
 
 The G305 comes with a HERO sensor, made by (I believe) [Pixart](https://www.pixart.com/index/).
 
