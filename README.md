@@ -171,6 +171,7 @@ P0.07 | rgb
 ## firmware
 
 [to be dumped](https://limitedresults.com/2020/06/nrf52-debug-resurrection-approtect-bypass/)
+[with this?](https://github.com/perigoso/nrf52-jailbreaker)
 
 ## Sensor
 
