@@ -172,12 +172,13 @@ P0.07 | rgb
 
 ## firmware
 
-[to be dumped](https://limitedresults.com/2020/06/nrf52-debug-resurrection-approtect-bypass/)
-[with this?](https://github.com/perigoso/nrf52-jailbreaker)
+Initially plans were made to break APPPROTECT and dump the firmware, but it appears logitech never enabled it (you ok? lol)
+
+[firmware dumps](flash_dump/)
 
 ## Sensor
 
 The G305 comes with a HERO sensor, made by (I believe) [Pixart](https://www.pixart.com/index/).
 
-A reverse engineering effort towards this sensor wwill be made in a separate repo [hero-re](https://github.com/perigoso/hero-re).
+A reverse engineering effort towards this sensor will be made in a separate repo [hero-re](https://github.com/perigoso/hero-re).
 
