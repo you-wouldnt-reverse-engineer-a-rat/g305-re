@@ -161,8 +161,8 @@ P0.23 | encoder pull up resistors (power saving)
 P0.00 | wheel encoder
 P0.01 | wheel encoder
 ~ | ~
-P0.02 | used as analog input to 2V??
-P0.03 | used as analog input to 3.7V section??
+P0.02 | battery analog input
+P0.03 | 3.7V (RGB VDD) enable
 ~ | ~
 P0.05 | rgb
 P0.06 | rgb
