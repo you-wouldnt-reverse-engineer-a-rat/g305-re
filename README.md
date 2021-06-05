@@ -153,8 +153,8 @@ P0.14 | SCLK
 P0.15 | LMB
 P0.16 | RMB
 P0.17 | MMB
-P0.18 | side button
-P0.19 | side button
+P0.18 | forward side button
+P0.19 | back side button
 P0.20 | dpi button
 ~ | ~
 P0.23 | encoder pull up resistors (power saving)
@@ -164,11 +164,9 @@ P0.01 | wheel encoder
 P0.02 | battery analog input
 P0.03 | 3.7V (RGB VDD) enable
 ~ | ~
-P0.05 | rgb
-P0.06 | rgb
-P0.07 | rgb
-
-`guess on P0.02/P0.03: one or both of them is used to monitor battery voltage`
+P0.05 | red LED
+P0.06 | green LED
+P0.07 | blue LED
 
 ## firmware
 
