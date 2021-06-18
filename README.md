@@ -24,7 +24,7 @@ Reverse engineering of the [G305](https://www.logitechg.com/en-us/products/gamin
 | Sleep Power ** | 200 | uW |
 | Deep Sleep Power *** | ? |  |
 | Turn On Voltage **** | 1.35 | V |
-| Max Voltage ***** | 2.0 | V |
+| Max Voltage ***** | 2.0 (3.6?) | V |
 
 ```
      * No movement
@@ -33,8 +33,8 @@ Reverse engineering of the [G305](https://www.logitechg.com/en-us/products/gamin
   **** Below this voltage the device is consistently unable to start
  ***** The device can tolerate more (tested up to 5.5V),
 but above 4.8V it seems to consume unusually high power during Deep Sleep,
-and above 2.0V the sensor voltage bus follows the input voltage (the same appens with the main 3.3V bus) meaning it goes over
-the normal opperating conditions.
+and above 2.0V the main voltage bus (nominal 2.0V) follows the input voltage (the same appens with the led 3.7V bus) meaning it goes over
+the normal opperating conditions, still unkown if it has any long term impact (cryomods is currently running a long term test on one), suspission is that it is generally safe.
 ```
 `These are rough conservative approximations (though measured with fairly good equipment). Measurements on a single personal device.`
 
