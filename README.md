@@ -176,7 +176,7 @@ Initially plans were made to break APPPROTECT and dump the firmware, but it appe
 
 ## Sensor
 
-The G305 comes with a HERO sensor, made by (I believe) [Pixart](https://www.pixart.com/index/).
+The G305 comes with a HERO sensor, made in house by logitech, based on the mercury.
 
 A reverse engineering effort towards this sensor will be made in a separate repo [hero-re](https://github.com/perigoso/hero-re).
 
